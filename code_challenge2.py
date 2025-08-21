@@ -4,14 +4,15 @@ print("Here is the breakdown of the deposited amount: ")
 thousand = deposit // 1000
 deposit = deposit % 1000
 
-fivehundred = deposit // 500
+five_hundred = deposit // 500
 deposit = deposit % 500
 
-twohundred = deposit // 200
+two_hundred = deposit // 200
 deposit = deposit % 200
 
-onehundred = deposit // 100
+one_hundred = deposit // 100
 deposit = deposit % 100
+
 fifty = deposit // 50
 deposit = deposit % 50
 
@@ -28,10 +29,11 @@ one = deposit // 1
 deposit = deposit % 1
 
 print(thousand,"-1000")
-print(fivehundred,"-500")
-print(twohundred,"-200")
-print(onehundred,"-100")
+print(five_hundred,"-500")
+print(two_hundred,"-200")
+print(one_hundred,"-100")
 print(fifty,"-50")
 print(twenty,"-20")
 print(ten,"-10")
+
 print(one,"-1")
