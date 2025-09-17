@@ -6,5 +6,5 @@ bird = 'Squawk!'
 print("Listen to your parrot: ")
 
 for haha in range(times):
-    print(bird, mock)
+    print(🦜bird, mock)
     
