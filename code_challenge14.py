@@ -14,7 +14,8 @@ while True:
     print("D - Delete Student Record")
     print("E - Edit Student Record")
     print("F - Export Student Record")
-    print("G - Exit System")
+    print("G - Import Student Record")
+    print("X - Exit System")
 
     choice = input("SELECT FROM THE OPTIONS").lower()
     os.system('cls')
@@ -111,6 +112,16 @@ while True:
         continue
 
     elif choice == 'g':
+        os.system('cls')
+        print("IMPORT STUDENT DATA")
+        with open('student_records.json', 'r') as new_file:
+            imported_files = json.load(new_file)
+
+        student_record = imported_files
+        print("\n\nDATA IMPORTED TO JSON") 
+        continue
+
+    elif choice == 'x':
         pass 
         break
     
