@@ -4,7 +4,7 @@ import os
 import time         
 import sys
 
-def type_print(text, speed=0.05): #studied this back then, because I'm curious on how python can do a typewriter vibes on texts. 
+def type_print(text, speed=0.05): #studied this back then, because I'm curious on how python can do a typewriter vibes effect on texts. 
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
@@ -1097,13 +1097,15 @@ def main_menu():
                 print("|3 - Hard                |")
                 print("|0 - Return to Main Menu |")
                 print("==========================")
-                choice = input("Choose quiz level (0-3): ")
+                difficulty = input("Choose quiz level (0-3): ")
                 
                 
-                if choice == '0':
-                    break
+                if difficulty == '0': 
+                    os.system('cls')
+                    break 
+                    
                 
-                elif choice == '1':
+                elif difficulty == '1':
                     quiz_name = "EASY"
                     total_q = 5
                     score = 0
@@ -1210,11 +1212,11 @@ def main_menu():
                     time.sleep(0.5)
                     print("\n============================================================================")
                     
-                    choice = input("\nEnter (0) to return:")
+                    difficulty = input("\nEnter (0) to return:")
                     os.system('cls')
 
                     
-                elif choice == '2':
+                elif difficulty == '2':
                     quiz_name = "MEDIUM"
                     total_q = 5
                     score = 0
@@ -1224,7 +1226,7 @@ def main_menu():
                     time.sleep(0.5)
                     
                 # MEDIUM QUESTIONS
-                if choice == "2":
+                if difficulty == "2":
                     #Q1
                     type_print("1. What does this expression return?  10 > 5 and 5 > 2", 0.05)
                     time.sleep(0.5)
@@ -1322,10 +1324,10 @@ def main_menu():
                     time.sleep(0.5)
                     print("============================================================================")
     
-                    choice = input("\nEnter (0) to return:")
+                    difficulty = input("\nEnter (0) to return:")
                     os.system('cls')
                 
-                elif choice == '3':
+                elif difficulty == '3':
                     quiz_name = "HARD"
                     total_q = 5
                     score = 0
@@ -1334,7 +1336,7 @@ def main_menu():
                     type_print(f"Hi, {name}. YOU CHOSE {quiz_name} QUIZ! Best of luck!\n", 0.05)
                     time.sleep(0.5)
                 # HARD QUESTIONS
-                if choice == "3":
+                if difficulty == "3":
                     #Q1
                     type_print("1. What is the output?  print( 3 * '2' )", 0.05)
                     time.sleep(0.5)
@@ -1431,14 +1433,9 @@ def main_menu():
                     type_print(f"RIGHT ANSWERS: {correct_ans}/{total_q}", 0.05)
                     time.sleep(0.5)
                     print("============================================================================")
-                    choice = input("\nEnter (0) to return:")
+                    difficulty = input("\nEnter (0) to return:")
                     os.system('cls')
 
-                elif choice == '0': 
-                    break 
-                    
-                else: 
-                    print("Invalid choice.")
                     
                     
                     
