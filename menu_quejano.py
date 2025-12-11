@@ -4,7 +4,7 @@ import os
 import time         
 import sys
 
-def type_print(text, speed=0.05):
+def type_print(text, speed=0.05): #studied this back then, because I'm curious on how python can do a typewriter vibes on texts. 
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
@@ -17,10 +17,21 @@ name = input("What's your name?")
 os.system('cls')
 type_print(f"Hello, {name}. Welcome! \nThis program is a simple interactive menu that shows basic Python concepts, such as: \n• print \n• variables \n• operators \n• conditionals \n• loops \n• lists \n• functions", 0.05)
 time.sleep(0.5)
-start = input("Would you like to start the program? (yes / no):")
+while True:
+    start = input("Would you like to start the program? (yes / no): ").lower()
+
+    if start == "no":
+        print("Exiting the program... Goodbye!")
+        exit() 
+
+    elif start == "yes":
+        break  
+
+    else:
+        print("Please type only 'yes' or 'no'.")
+        continue
+
 enter = input("\nPlease type 'Enter' to continue:")
-
-
 
 def main_menu():
     while True:
@@ -44,6 +55,11 @@ def main_menu():
         
         select = input("Select your choice (0 - 8):")
         os.system('cls')
+        
+
+
+
+
         
         #MAIN MENU 1
         if select == "1":
@@ -84,7 +100,7 @@ def main_menu():
                     time.sleep(0.5)
                     print("\n============================================================================")
                     print("\nCORRECT SYNTAX:")
-                    print("\nprint(\"Message\"")
+                    print("\nprint(\"Message\")")
                     print("print(variable)")
                     print("\n============================================================================")
                     print("\nSYNTAX ERROR:")
@@ -146,7 +162,7 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
                     print("============================================================================")
                             
@@ -265,7 +281,7 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
 
                     print("============================================================================")
@@ -293,7 +309,7 @@ def main_menu():
                 print("-------------------------------")
                 print("-----------OPERATORS-----------")
                 print("-------------------------------")
-                print("|1 - Definition               |")
+                print("|1 - Types of Operators       |")
                 print("|2 - Syntax                   |")
                 print("|3 - Example                  |")
                 print("|4 - Try It Yourself          |")
@@ -496,7 +512,7 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
 
                     print("============================================================================")
@@ -633,7 +649,7 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
 
                     print("============================================================================")
@@ -682,11 +698,10 @@ def main_menu():
                     time.sleep(0.5)     
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')
 
                 elif choice == '2':
                     os.system('cls')
-                    print("============================================================================")
                     print("\t\t\t\tSYNTAX\t\t\t\t\n") 
                     print("============================================================================")
                     type_print("\nSyntax = the correct structure and format of code so Python can understand it.")
@@ -712,7 +727,7 @@ def main_menu():
                     time.sleep(0.5)
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-    
+                    os.system('cls')
         
                 elif choice == '3':
                     os.system('cls')
@@ -730,7 +745,7 @@ def main_menu():
                     print("\nOutput: 0 1 2 3 4")
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')
 
                 elif choice == '4':
                     os.system('cls')
@@ -770,12 +785,12 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
 
                     print("============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')
 
                     
                 elif choice == '0':
@@ -821,7 +836,7 @@ def main_menu():
                     time.sleep(0.5)     
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')
 
                 elif choice == '2':
                     os.system('cls')
@@ -850,7 +865,7 @@ def main_menu():
                     time.sleep(0.5)
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-
+                    os.system('cls')
 
                 elif choice == '3':
                     os.system('cls')
@@ -873,7 +888,7 @@ def main_menu():
                     print("\nprint(fruits)")
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')
 
                 elif choice == '4':
                     os.system('cls')
@@ -914,12 +929,12 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
 
                     print("============================================================================")
                     choice = input("\nEnter (0) to return:")
-                    
+                    os.system('cls')
                     
                 elif choice == '0':
                     os.system('cls')
@@ -962,11 +977,11 @@ def main_menu():
                     print("============================================================================")
                     print("\t\t\t\tDEFINITION\t\t\t\t\n")
                     print("============================================================================")
-                    type_print("\n - Functions are reusable blocks of code.\nThey let you organize your program and avoid repeating code.", 0.05)
+                    type_print("\n - Functions are reusable blocks of code.\n - They let you organize your program and avoid repeating code.", 0.05)
                     time.sleep(0.5)     
                     print("============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')    
 
 
                 elif choice == '2':
@@ -991,7 +1006,7 @@ def main_menu():
                     time.sleep(0.5)
                     print("\n============================================================================")
                     choice = input("\nEnter (0) to return:")
-
+                    os.system('cls')
 
                 elif choice == '3':
                     os.system('cls')
@@ -1010,7 +1025,7 @@ def main_menu():
                     print("greet(\"Angela\")  # Output: Hello, Angela")
                     print("============================================================================")
                     choice = input("\nEnter (0) to return:")
-            
+                    os.system('cls')
 
                 elif choice == '4':
                     os.system('cls')
@@ -1050,12 +1065,12 @@ def main_menu():
                         time.sleep(0.5)
                         type_print("Nice try, do it again!", 0.05)
                         time.sleep(0.5)
-                        type_print("Error message:", e, 0.05)
+                        type_print(f"Error message: {e}", 0.05)
                         time.sleep(0.5)
 
                     print("============================================================================")
                     choice = input("\nEnter (0) to return:")
-                    
+                    os.system('cls')
                     
                 elif choice == '0':
                     os.system('cls')
@@ -1130,7 +1145,7 @@ def main_menu():
                         print("Wrong! Correct answer: a")
                         
                     print("============================================================================")
-                    print("\nExplanation: \n• The + operator performs addition in Python. \n• is subtraction, \n• and * is multiplication.")
+                    print("\nExplanation: \n• The + operator performs addition in Python. \n• - is subtraction, \n• and * is multiplication.")
                     print("\n============================================================================")
 
                     #Q3
@@ -1196,7 +1211,7 @@ def main_menu():
                     print("\n============================================================================")
                     
                     choice = input("\nEnter (0) to return:")
-                 
+                    os.system('cls')
 
                     
                 elif choice == '2':
@@ -1308,7 +1323,7 @@ def main_menu():
                     print("============================================================================")
     
                     choice = input("\nEnter (0) to return:")
-    
+                    os.system('cls')
                 
                 elif choice == '3':
                     quiz_name = "HARD"
@@ -1389,7 +1404,7 @@ def main_menu():
                         print("Wrong! Correct answer: b")
                         
                     print("============================================================================")
-                    print("\nExplanation: \n• This is list indexing. \n• Indexing starts at 0: \n•  Index 0 → 1 \n• Index 1 → 2 \n• Index 2 → 3 \n• So [1, 2, 3][1] = 2")
+                    print("\nExplanation: \n• This is list indexing. \n• Indexing starts at 0: \n• Index 0 → 1 \n• Index 1 → 2 \n• Index 2 → 3 \n• So [1, 2, 3][1] = 2")
                     print("\n============================================================================")
 
                     #Q5
@@ -1417,7 +1432,7 @@ def main_menu():
                     time.sleep(0.5)
                     print("============================================================================")
                     choice = input("\nEnter (0) to return:")
-
+                    os.system('cls')
 
                 elif choice == '0': 
                     break 
@@ -1433,11 +1448,11 @@ def main_menu():
             type_print(f"\nYou are EXITING the program... Hope you've learned something, Thank you, {name}!", 0.05)
             time.sleep(0.5)
             break
-
+    
+    
 if enter.lower() == "enter":
     os.system('cls')
     print("Going to the Main Menu...\n")
     main_menu()
 else:
     print("You did not type 'Enter'. Exiting program.")
-    
